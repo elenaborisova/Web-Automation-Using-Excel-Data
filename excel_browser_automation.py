@@ -7,8 +7,8 @@ import os
 
 # Navigate to Excel file
 root = tkinter.Tk()
-curr_dir = os.getcwd()
-temp_dir = tkinter.filedialog.askopenfilename(parent=root, initialdir=currdir, title='Please select a directory')
+currdir = os.getcwd()
+tempdir = tkinter.filedialog.askopenfilename(parent=root, initialdir=currdir, title='Please select a directory')
 if len(tempdir) > 0:
     print(f"You chose {tempdir}")
 book = xlrd.open_workbook(tempdir)
